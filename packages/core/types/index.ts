@@ -1,4 +1,4 @@
-import type { AnyFn } from '@drag-drop/shared'
+import type { AnyFn } from '@123fang-dnd/shared'
 import type { ComputedRef, Ref } from 'vue'
 
 export type NullUndefinedAble<T> = T | null | undefined

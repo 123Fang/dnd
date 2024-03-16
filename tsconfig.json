@@ -22,6 +22,12 @@
       ],
       "@123fang-dnd/shared": [
         "./packages/shared/index.ts"
+      ],
+      "@123fang-dnd/plugin-auxiliary-line": [
+        "./packages/plugins/auxiliaryLine/index.tsx"
+      ],
+      "@123fang-dnd/plugin-mouse-follow": [
+        "./packages/plugins/mouseFollow/index.tsx"
       ]
     }
   },

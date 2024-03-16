@@ -1,7 +1,11 @@
-import { type AnyFn, isFunc, noop } from '@123fang-dnd/shared'
+import { type AnyFn, isFunc } from '@123fang-dnd/shared'
 import { Fragment, h, onScopeDispose, render } from 'vue'
 import type { DragDropPlugin, UseDragDropContext } from '../types'
 
+
+function noop() {
+  return undefined
+}
 export class PluginScope {
   active = true
   exposed = {}

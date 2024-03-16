@@ -1,4 +1,5 @@
-import { getBoundingClientRect } from '@drag-drop/shared'
+import { getBoundingClientRect } from '@123fang-dnd/shared'
+
 import type { EnhancedMouseEvent, NullUndefinedAble } from '../types'
 
 export function castEnhancedMouseEvent(event: MouseEvent, iframe?: HTMLIFrameElement): EnhancedMouseEvent {

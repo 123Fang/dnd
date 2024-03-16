@@ -1,4 +1,4 @@
-import type { EnhancedMouseEvent } from '@drag-drop/core'
+import type { EnhancedMouseEvent } from '@123fang-dnd/core'
 
 export enum DirectionEnum {
   LEFT = 'LEFT',

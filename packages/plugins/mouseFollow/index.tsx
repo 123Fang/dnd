@@ -1,4 +1,4 @@
-import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@drag-drop/core'
+import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@123fang-dnd/core'
 import { isBool, isFunc } from '@123fang-dnd/shared'
 import { ref, unref } from 'vue'
 import type { CSSProperties, VNodeChild } from 'vue'

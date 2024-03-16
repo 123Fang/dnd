@@ -1,5 +1,5 @@
-import type { EnhancedMouseEvent } from '@drag-drop/core'
-import { getBoundingClientRect } from '@drag-drop/shared'
+import type { EnhancedMouseEvent } from '@123fang-dnd/core'
+import { getBoundingClientRect } from '@123fang-dnd/shared'
 import { DirectionEnum, LayoutEnum } from './types'
 import type { AuxiliaryLineLocation } from './types'
 

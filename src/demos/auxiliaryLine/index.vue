@@ -1,7 +1,7 @@
 <script setup lang="tsx">
-import { useDragDrop } from '@drag-drop/core'
-import { auxiliaryLinePlugin } from '@drag-drop/plugin-auxiliary-line'
-import { mouseFollowPlugin } from '@drag-drop/plugin-mouse-follow'
+import { useDragDrop } from '@123fang-dnd/core'
+import { auxiliaryLinePlugin } from '@123fang-dnd/plugin-auxiliary-line'
+import { mouseFollowPlugin } from '@123fang-dnd/plugin-mouse-follow'
 import { computed, ref } from 'vue'
 import { IframeContainer } from '../../IframeContainer'
 

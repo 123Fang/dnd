@@ -1,7 +1,7 @@
-import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@drag-drop/core'
+import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@123fang-dnd/core'
 import type { CSSProperties, VNodeChild } from 'vue'
 import { computed, ref, unref } from 'vue'
-import { getBoundingClientRect, isBool, isFunc } from '@drag-drop/shared'
+import { getBoundingClientRect, isBool, isFunc } from '@123fang-dnd/shared'
 import { calculateLayout, calculateXLocation, calculateYLocation, getMouseAfterElement, getMouseBeforeElement, isElementNode, isInThresholdRange, numberToPx } from './helpers'
 import { type AuxiliaryLineLocation, DirectionEnum, LayoutEnum } from './types'
 

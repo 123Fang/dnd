@@ -11,6 +11,8 @@
   "dependencies": {
     "@123fang-dnd/core": "workspace:0.0.1",
     "@123fang-dnd/shared": "workspace:0.0.1",
+    "@123fang-dnd/plugin-auxiliary-line": "workspace:^0.0.1",
+    "@123fang-dnd/plugin-mouse-follow": "workspace:^0.0.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
     "@vueuse/core": "^10.3.0"

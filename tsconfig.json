@@ -28,6 +28,9 @@
       ],
       "@123fang-dnd/plugin-mouse-follow": [
         "./packages/plugins/mouseFollow/index.tsx"
+      ],
+      "@123fang-dnd/plugin-sort": [
+        "./packages/plugins/sort/index.tsx"
       ]
     }
   },

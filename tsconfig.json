@@ -31,7 +31,10 @@
       ],
       "@123fang-dnd/plugin-sort": [
         "./packages/plugins/sort/index.tsx"
-      ]
+      ],
+      "@123fang-dnd/plugin-outline": [
+        "./packages/plugins/outline/index.tsx"
+      ],
     }
   },
   "include": [

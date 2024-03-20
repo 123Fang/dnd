@@ -11,10 +11,24 @@ export const routes = [
     },
   },
   {
+    path: '/outline',
+    component: () => import('./demos/outline/index.vue'),
+    meta: {
+      desc: 'outline 插件演示',
+    },
+  },
+  {
     path: '/sort',
     component: () => import('./demos/sort/index.vue'),
     meta: {
       desc: '排序插件演示',
+    },
+  },
+  {
+    path: '/tree',
+    component: () => import('./demos/tree/index.vue'),
+    meta: {
+      desc: '树形列表拖拽',
     },
   },
   {

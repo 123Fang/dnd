@@ -1,6 +1,6 @@
-import type { DragDropPluginCtx, DrapDropEventsCallback, MaybeBoolOrFunc } from '@drag-drop/core'
-import type { AnyFn } from '@drag-drop/shared'
-import { getBoundingClientRect, isBool, isFunc, isHtmlElement, isNumber, noop, useEventListener } from '@drag-drop/shared'
+import type { DragDropPluginCtx, DrapDropEventsCallback, MaybeBoolOrFunc } from '@123fang-dnd/core'
+import type { AnyFn } from '@123fang-dnd/shared'
+import { getBoundingClientRect, isBool, isFunc, isHtmlElement, isNumber, noop, useEventListener } from '@123fang-dnd/shared'
 import type { CSSProperties, VNodeChild } from 'vue'
 import { onScopeDispose, ref, unref, watch } from 'vue'
 

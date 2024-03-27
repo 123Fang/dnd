@@ -17,6 +17,12 @@ importers:
       '@123fang-dnd/plugin-mouse-follow':
         specifier: workspace:^0.0.1
         version: link:packages/plugins/mouseFollow
+      '@123fang-dnd/plugin-outline':
+        specifier: workspace:^0.0.1
+        version: link:packages/plugins/outline
+      '@123fang-dnd/plugin-sort':
+        specifier: workspace:^
+        version: link:packages/plugins/sort
       '@123fang-dnd/shared':
         specifier: workspace:0.0.1
         version: link:packages/shared
@@ -64,6 +70,10 @@ importers:
   packages/plugins/auxiliaryLine: {}
 
   packages/plugins/mouseFollow: {}
+
+  packages/plugins/outline: {}
+
+  packages/plugins/sort: {}
 
   packages/shared:
     dependencies:

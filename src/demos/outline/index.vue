@@ -1,8 +1,8 @@
-<script setup lang="tsx">
-import { useDragDrop } from '@@123fang-dnd/core'
-import type { OutlinePluginExposed } from '@@123fang-dnd/plugin-outline'
-import { outlinePlugin } from '@@123fang-dnd/plugin-outline'
-import { useEventListener } from '@@123fang-dnd/shared'
+<script setup lang="ts">
+import { useDragDrop } from '@123fang-dnd/core'
+import type { OutlinePluginExposed } from '@123fang-dnd/plugin-outline'
+import { outlinePlugin } from '@123fang-dnd/plugin-outline'
+import { useEventListener } from '@123fang-dnd/shared'
 
 const context = useDragDrop()
 const { exposed } = context.use(outlinePlugin({

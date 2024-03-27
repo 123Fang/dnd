@@ -1,9 +1,9 @@
 <script setup lang="tsx">
 import { computed, ref, unref } from 'vue'
 import type { TreeOption } from 'naive-ui'
-import type { EnhancedMouseEvent } from '@drag-drop/core'
-import { useDragDrop } from '@drag-drop/core'
-import { sortPlugin } from '@drag-drop/plugin-sort'
+import type { EnhancedMouseEvent } from '@123fang-dnd/core'
+import { useDragDrop } from '@123fang-dnd/core'
+import { sortPlugin } from '@123fang-dnd/plugin-sort'
 
 interface TreeItem {
   name: string

@@ -25,6 +25,13 @@ export const routes = [
     },
   },
   {
+    path: '/sort-two',
+    component: () => import('./demos/sort-two/index.vue'),
+    meta: {
+      desc: '2个列表排序插件演示',
+    },
+  },
+  {
     path: '/tree',
     component: () => import('./demos/tree/index.vue'),
     meta: {

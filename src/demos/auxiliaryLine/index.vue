@@ -18,7 +18,8 @@ context.use(mouseFollowPlugin({
   canDraggable: event => !!event.target?.classList.contains('materiel-item') || !!event.target?.classList.contains('node'),
 }))
 context.use(auxiliaryLinePlugin({
-  showAuxiliaryLine: event => !!event.target?.classList.contains('node'),
+  // showAuxiliaryLine: event => !!event.target?.classList.contains('node'),
+  showAuxiliaryLine: 'node'
 }))
 </script>
 
@@ -42,36 +43,43 @@ context.use(auxiliaryLinePlugin({
       </div>
     </div>
     <div class="canvas-panel">
-      <IframeContainer ref="iframeInstRef" :show-title="false">
-        <div :style="{ display: 'flex', gap: '10px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }" class="node">
+      <IframeContainer ref="iframeInstRef" :show-title="true">
+        <div
+          :style="{ display: 'flex', gap: '10px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }"
+          class="node">
           <span :style="{ color: 'red', border: '1px solid #ccc' }" class="node">node1</span>
-          <!-- <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span> -->
-          <div :style="{ display: 'flex', gap: '30px',color: 'skyblue',padding: '8px', border: '1px solid #ccc' }" class="node">
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node3-1</span>
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node3-2</span>
+          <div :style="{ display: 'flex', gap: '30px', color: 'skyblue', padding: '8px', border: '1px solid #ccc' }"
+            class="node">
+            <span :style="{ color: 'blue', border: '1px solid #ccc' }" class="node">node3-1</span>
+            <span :style="{ color: 'pink', border: '1px solid #ccc', padding: '12px' }" class="node"> <span>node3-2</span> </span>
           </div>
         </div>
-        <div :style="{ display: 'flex', gap: '10px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }" class="node">
+        <div
+          :style="{ display: 'flex', gap: '30px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }"
+          class="node">
           <span :style="{ color: 'red', border: '1px solid #ccc' }" class="node">node1</span>
           <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span>
           <span :style="{ color: 'skyblue', border: '1px solid #ccc' }" class="node">node3</span>
         </div>
-        <div :style="{ display: 'flex', gap: '10px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }" class="node">
-          <div :style="{ display: 'flex', gap: '20px',color: 'skyblue',padding: '8px', border: '1px solid #ccc' }" class="node">
-            <div :style="{ display: 'flex', gap: '30px',color: 'skyblue',padding: '8px', border: '1px solid #ccc' }" class="node">
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node1</span>
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span>
+        <div
+          :style="{ display: 'flex', gap: '10px', padding: '8px', border: '1px solid #ccc', userSelect: 'none', marginTop: '18px' }"
+          class="node">
+          <div :style="{ display: 'flex', gap: '20px', color: 'skyblue', padding: '8px', border: '1px solid #ccc' }"
+            class="node">
+            <div :style="{ display: 'flex', gap: '30px', color: 'skyblue', padding: '8px', border: '1px solid #ccc' }"
+              class="node">
+              <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node1</span>
+              <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span>
+            </div>
           </div>
+          <div :style="{ display: 'flex', gap: '20px', color: 'skyblue', padding: '8px', border: '1px solid #ccc' }"
+            class="node">
+            <div :style="{ display: 'flex', gap: '30px', color: 'skyblue', padding: '8px', border: '1px solid #ccc' }"
+              class="node">
+              <span :style="{ color: 'yellow', border: '1px solid #ccc' }" class="node">node1</span>
+              <span :style="{ color: 'blue', border: '1px solid #ccc' }" class="node">node2</span>
+            </div>
           </div>
-          <div :style="{ display: 'flex', gap: '20px',color: 'skyblue',padding: '8px', border: '1px solid #ccc' }" class="node">
-            <div :style="{ display: 'flex', gap: '30px',color: 'skyblue',padding: '8px', border: '1px solid #ccc' }" class="node">
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node1</span>
-            <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span>
-          </div>
-          </div>
-          <!-- <span :style="{ color: 'red', border: '1px solid #ccc'}" class="node">node1</span> -->
-          <!-- <span :style="{ color: 'pink', border: '1px solid #ccc' }" class="node">node2</span>
-          <span :style="{ color: 'skyblue', border: '1px solid #ccc' }" class="node">node3</span> -->
         </div>
       </IframeContainer>
       <!-- <iframe ref="iframeElRef" src="./frame.html" /> -->
@@ -80,12 +88,13 @@ context.use(auxiliaryLinePlugin({
 </template>
 
 <style scoped>
-.container{
+.container {
   display: flex;
   margin: 100px 0 0 0;
   padding: 20px;
 }
-.left-panel{
+
+.left-panel {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
@@ -93,7 +102,8 @@ context.use(auxiliaryLinePlugin({
   height: 200px;
   user-select: none;
 }
-.materiel-item{
+
+.materiel-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,7 +111,8 @@ context.use(auxiliaryLinePlugin({
   height: 70px;
   border: 1px solid #ccc;
 }
-.node{
+
+.node {
   display: inline-block;
   line-height: 100%;
 }

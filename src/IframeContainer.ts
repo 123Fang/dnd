@@ -1,4 +1,4 @@
-import { defineComponent, onMounted, ref, render, useSlots } from 'vue'
+import { defineComponent, onMounted, ref, render, useSlots,h } from 'vue'
 
 const isStyleTag = (el?: HTMLElement | Element) => el && el.tagName === 'STYLE'
 
@@ -63,17 +63,23 @@ export const IframeContainer = defineComponent({
 
     onMounted(() => {
       const body = iframeElRef.value!.contentDocument!.body // 拿到iframe的body
-      const vnode = <div>
-        {props.showTitle !== false && <h1>Iframe容器...</h1>}
-        {renderSlots()}
-      </div>
+      // const vnode = <div>
+      //   {props.showTitle !== false && <div>Iframe容器</div>}
+      //   {renderSlots()}
+      // </div>
+      const vnode = h('div',{},renderSlots())
 
       render(vnode, body) // 把这个是vnode渲染成dom,然后插入body中。
     })
 
     return () => {
       // 这种方法没有跨域的问题！
-      return <iframe ref={iframeElRef} width='400px' height='300px'></iframe>
+      return h('iframe', {
+        width: '400px',
+        height: '300px',
+        ref: iframeElRef
+      })
+      // return <iframe ref={iframeElRef} width='400px' height='300px'></iframe>
     }
   },
 })

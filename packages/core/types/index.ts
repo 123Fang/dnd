@@ -2,7 +2,7 @@ import type { AnyFn } from '@123fang-dnd/shared'
 import type { ComputedRef, Ref } from 'vue'
 
 export type NullUndefinedAble<T> = T | null | undefined
-export type MaybeBoolOrFunc<T extends AnyFn> = boolean | T
+export type MaybeBoolOrFuncOrString<T extends AnyFn> = boolean | T | string
 
 export interface EnhancedMouseEvent {
   x: number

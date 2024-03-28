@@ -1,4 +1,4 @@
-import type { DragDropPluginCtx, DrapDropEventsCallback, MaybeBoolOrFunc } from '@123fang-dnd/core'
+import type { DragDropPluginCtx, DrapDropEventsCallback, MaybeBoolOrFuncOrString } from '@123fang-dnd/core'
 import type { AnyFn } from '@123fang-dnd/shared'
 import { getBoundingClientRect, isBool, isFunc, isHtmlElement, isNumber, noop, useEventListener } from '@123fang-dnd/shared'
 import type { CSSProperties, VNodeChild } from 'vue'
@@ -27,7 +27,7 @@ interface OutlinePluginOptions {
   scrollCorrected?: boolean
   onRender?: (rect: Rect) => VNodeChild
   onDragging?: DrapDropEventsCallback['onDragging']
-  showOutline?: MaybeBoolOrFunc<(rect: Rect) => boolean>
+  showOutline?: MaybeBoolOrFuncOrString<(rect: Rect) => boolean>
 }
 
 export function outlinePlugin(options: OutlinePluginOptions = {}) {

@@ -1,5 +1,5 @@
 import { ref, unref } from 'vue'
-import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@123fang-dnd/core'
+import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFuncOrString } from '@123fang-dnd/core'
 import { isBool, isFunc } from '@123fang-dnd/shared'
 
 interface SortPluginOptions {
@@ -7,7 +7,7 @@ interface SortPluginOptions {
   onEnd?: DrapDropEventsCallback['onEnd']
   onMove?: DrapDropEventsCallback['onMove']
   onStart?: DrapDropEventsCallback['onStart']
-  canDraggable?: MaybeBoolOrFunc<(event: EnhancedMouseEvent) => boolean>
+  canDraggable?: MaybeBoolOrFuncOrString<(event: EnhancedMouseEvent) => boolean>
 }
 export function sortPlugin(options: SortPluginOptions) {
   return function ({ context }: DragDropPluginCtx) {

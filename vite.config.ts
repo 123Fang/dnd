@@ -1,9 +1,8 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
-import { resolve } from 'path'
 
-// https://vitejs.dev/config/
+
 export default defineConfig({
   plugins: [vue(), vueJsx()],
   resolve: {
@@ -13,9 +12,10 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: {
-        shared: 'packages/shared/index.ts',
         core: 'packages/core/index.ts',
-        plugin: 'packages/plugins/auxiliaryLine/index.tsx',
+        // plugin: 'packages/plugins/auxiliaryLine/index.tsx',
+        // mouseFollow: 'packages/plugins/mouseFollow/index.tsx',
+        // shared: 'packages/shared/index.ts'
       },
       name: 'core-dnd'// window.core-dnd
     },
@@ -24,9 +24,10 @@ export default defineConfig({
       output: {
         // 强制 shared 包不打包出单独的 chunk
         manualChunks(id) {
-          if (id.includes('/packages/shared/')) {
-            return 'shared'
-          }
+          return 'core'
+          // if (id.includes('/packages/shared/')) {
+          //   return 'shared'
+          // }
         }
       }
     }

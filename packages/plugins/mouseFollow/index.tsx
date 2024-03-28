@@ -1,4 +1,4 @@
-import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFunc } from '@123fang-dnd/core'
+import type { DragDropPluginCtx, DrapDropEventsCallback, EnhancedMouseEvent, MaybeBoolOrFuncOrString } from '@123fang-dnd/core'
 import { isBool, isFunc } from '@123fang-dnd/shared'
 import { ref, unref } from 'vue'
 import type { CSSProperties, VNodeChild } from 'vue'
@@ -21,7 +21,7 @@ interface MouseFollowPluginOptions {
   onEnd?: DrapDropEventsCallback['onEnd']
   onStart?: DrapDropEventsCallback['onStart']
   onDragging?: DrapDropEventsCallback['onDragging']
-  canDraggable?: MaybeBoolOrFunc<(event: EnhancedMouseEvent) => boolean>
+  canDraggable?: MaybeBoolOrFuncOrString<(event: EnhancedMouseEvent) => boolean>
   onRender?: (event: EnhancedMouseEvent, style: CSSProperties) => VNodeChild
 }
 

@@ -12,9 +12,9 @@ export default defineConfig({
     minify: false,
     lib: {
       entry: {
-        core: 'packages/core/index.ts',
+        // core: 'packages/core/index.ts',
         // plugin: 'packages/plugins/auxiliaryLine/index.tsx',
-        // mouseFollow: 'packages/plugins/mouseFollow/index.tsx',
+        mouseFollow: 'packages/plugins/mouseFollow/index.tsx',
         // shared: 'packages/shared/index.ts'
       },
       name: 'core-dnd'// window.core-dnd
@@ -24,7 +24,8 @@ export default defineConfig({
       output: {
         // 强制 shared 包不打包出单独的 chunk
         manualChunks(id) {
-          return 'core'
+          return 'mouseFollow'
+          // RollupError: Invalid value for option "output.manualChunks" - this option is not supported for "output.inlineDynamicImports".
           // if (id.includes('/packages/shared/')) {
           //   return 'shared'
           // }

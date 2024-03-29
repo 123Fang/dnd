@@ -2,7 +2,7 @@
 import type { EnhancedMouseEvent } from '@123fang-dnd/core'
 import { useDragDrop } from '@123fang-dnd/core'
 import { sortPlugin } from '@123fang-dnd/plugin-sort'
-import { useEventListener } from '@123fang-dnd/shared'
+// import { useEventListener } from '@123fang-dnd/shared'
 import { computed, ref, unref } from 'vue'
 
 interface Item {
@@ -119,7 +119,9 @@ async function sort(startEvent: EnhancedMouseEvent, moveEvent: EnhancedMouseEven
   pause()
 }
 
-useEventListener('transitionend', resume)
+// useEventListener('transitionend', resume)
+
+window.addEventListener('transitionend', resume);
 
 context.onEnd(resetColor)
 </script>
